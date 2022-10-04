@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pagina Cores</title>
+    <script>
+        function checacor(){
+            let azul = document.getElementById('az');
+            if(azul.checked){
+                document.getElementById('azul').style.backgroundColor = 'blue'
+            }
+            else document.getElementById('azul').style.backgroundColor = 'white'
+        
+            let verm = document.getElementById('ve');
+            if(verm.checked){
+                document.getElementById('verm').style.backgroundColor = 'red'
+            }
+            else document.getElementById('verm').style.backgroundColor = 'white'
+        
+            let ama = document.getElementById('am');
+            if(ama.checked){
+                document.getElementById('ama').style.backgroundColor = 'yellow'
+            }
+            else document.getElementById('ama').style.backgroundColor = 'white'
+        }
+    </script>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            margin: auto ;
+        }
+       .azul{
+           width: 100px;
+           height: 100px;
+           border: 1px solid #000;
+       }
+       .vermelho{
+        width: 100px;
+           height: 100px;
+           border: 1px solid #000;
+       }
+       .amarelo{
+        width: 100px;
+           height: 100px;
+           border: 1px solid #000;
+       }
+       .cores{
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: center;
+       }
+      
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <input type="button" value="Checa Cores" onclick="checacor()">
+        </div>
+    <div>
+        <input id="az" type="checkbox">Azul
+        <input id="ve" type="checkbox">Vermelho
+        <input id="am" type="checkbox">Amarelo
+    </div>
+    <div class="cores">
+        <div id="azul" class="azul">
+
+        </div>
+        <div id="verm" class="vermelho">
+
+        </div>
+        <div id="ama" class="amarelo">
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>
